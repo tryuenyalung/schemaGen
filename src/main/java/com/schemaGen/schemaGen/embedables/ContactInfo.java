@@ -11,7 +11,7 @@ public class ContactInfo {
 	
 	@Column(name = "firstName", columnDefinition="VARCHAR(20)")
 	private String firstName;
-	
+	 
 	@Column(name = "middleName", columnDefinition="TEXT")
 	private String middleName;
 	

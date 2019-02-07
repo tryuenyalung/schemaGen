@@ -16,7 +16,7 @@ import lombok.Data;
 @Table(name="userTable")
 @Entity
 public class User {
-
+ 
 	@Id
 	@Column(name = "id", columnDefinition="bigint", length=20)
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
