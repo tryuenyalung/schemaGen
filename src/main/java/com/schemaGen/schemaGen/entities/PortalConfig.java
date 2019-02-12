@@ -8,22 +8,24 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import com.schemaGen.schemaGen.embedables.ContactInfo;
+import com.schemaGen.schemaGen.embedables.BuildingPage;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
-@Table(name="userTable")
 @Entity
-public class User {
- 
+@NoArgsConstructor
+@AllArgsConstructor
+@Table(name ="portalConfig")
+public class PortalConfig {
+	
+	
 	@Id
-	@Column(name = "id", columnDefinition="bigint", length=20)
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
 	
 	@Embedded
-	private ContactInfo contact;
-
-	
+	private BuildingPage buildingPage;
 }
